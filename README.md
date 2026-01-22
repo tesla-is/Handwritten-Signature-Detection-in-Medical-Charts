@@ -1,6 +1,6 @@
 # Signature Detection on PDFs (YOLOv8)
 
-Detect and localize handwritten/ink signatures in PDF documents using a YOLOv8 model.  
+Detect and localize handwritten (ink and digital) signatures in PDF documents using a YOLOv8 model.  
 This project converts each PDF page to an image, enhances contrast, runs a trained signature detector, saves annotated pages for all detections, and generates **structured analytics** at both the PDF level and the page level.
 
 ---
