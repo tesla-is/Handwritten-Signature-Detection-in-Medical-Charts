@@ -3,8 +3,6 @@
 Detect and localize handwritten/ink signatures in PDF documents using a YOLOv8 model.  
 This project converts each PDF page to an image, enhances contrast, runs a trained signature detector, saves annotated pages for all detections, and generates **structured analytics** at both the PDF level and the page level.
 
-> **Who is this for?** Data/ML engineers, RPA and operations teams, audit/compliance analysts, and anyone needing automated signature presence checks at scale.
-
 ---
 
 ## ✨ Highlights
@@ -17,7 +15,7 @@ This project converts each PDF page to an image, enhances contrast, runs a train
 
 ---
 
-## 🧠 What it does (elaborate description)
+## 🧠 What it does 
 
 Signature verification is a frequent requirement in document workflows (intake, claims, contracting, audits). This project automates the **detection** (not semantic verification) of signature regions on PDF pages. It:
 
@@ -43,14 +41,12 @@ The pipeline is optimized for **practical throughput** with multithreading per p
 ├── README.md                        # This file
 ├── requirements.txt                 # Python dependencies
 ├── .gitignore
-├── CHANGELOG.md                     # (optional) Changelog
-├── CONTRIBUTING.md                  # (optional) Contribution guide
-├── CODE_OF_CONDUCT.md               # (optional) Code of Conduct
-├── SECURITY.md                      # (optional) Security policy
-└── LICENSE                          # (required) Your org's license text
+├── CHANGELOG.md                    
+├── CONTRIBUTING.md                 
+├── CODE_OF_CONDUCT.md               
+├── SECURITY.md                      
+└── LICENSE                          
 ```
-
-> If you’re using a notebook version, keep it alongside and ensure the script is the primary entry point for CI/CD and automation.
 
 ---
 
@@ -58,13 +54,7 @@ The pipeline is optimized for **practical throughput** with multithreading per p
 
 ### 1) Python environment
 
-```bash
-python -m venv .venv
-# Linux/macOS
-source .venv/bin/activate
-# Windows
-# .venv\Scripts\activate
-
+```
 pip install -r requirements.txt
 ```
 
@@ -271,52 +261,6 @@ supervision>=0.17.0
 tqdm>=4.66.0
 ```
 
-> Pin versions per your organization’s standards if needed.
-
----
-
-## 🧹 .gitignore (excerpt)
-
-```gitignore
-# Python
-__pycache__/
-*.py[cod]
-.venv/
-dist/
-build/
-
-# Notebooks/Databricks
-.ipynb_checkpoints/
-*.dbc
-.databricks/
-
-# Project outputs
-output/
-*.png
-*.csv
-hf_cache/
-```
-
----
-
-## 🧑‍💻 Contributing
-
-We welcome contributions (bug fixes, features, docs).  
-Please see `CONTRIBUTING.md` and follow your organization’s standard PR and code review processes. Do **not** include sensitive PDFs or secrets in PRs.
-
----
-
-## 🛡️ Security Policy
-
-Please report vulnerabilities **privately** to the maintainers or via your org’s security process. See `SECURITY.md`.
-
----
-
-## 📜 License
-
-Add your organization’s approved license text in `LICENSE`.  
-Confirm compatibility with the upstream model license from Hugging Face.
-
 ---
 
 ## 🙏 Acknowledgments
@@ -328,25 +272,16 @@ Confirm compatibility with the upstream model license from Hugging Face.
 
 ---
 
-## 📌 Notes for Maintainers (from current code)
-
-- Remove any hard‑coded secrets; use `HF_TOKEN` from env/secret store.
-- Fix typo if present: `MAX_WORKERS = 20` (ensure no stray whitespace).
-- Replace Databricks‑specific paths with env vars (see Configuration).
-- Keep the default YOLO input size ≥1280 for small signature recall.
-
----
-
-## 🧾 Citation (optional)
+## 🧾 Citation 
 
 If you publish a report or internal paper citing this tool, you can use:
 
 ```bibtex
 @software{signature_detection_yolov8,
   title = {Signature Detection on PDFs (YOLOv8)},
-  author = {<Your Team/Org>},
+  author = {Rahul Pathak},
   year = {2026},
-  url = {https://<your-github-host>/<org>/<repo>},
+  url = {[https://<your-github-host>/<org>/<repo>](https://github.com/tesla-is/Handwritten-Signature-Detection-in-Medical-Charts)},
   note = {PDF-to-image pipeline with CLAHE preprocessing, YOLOv8 inference, and analytics export}
 }
 ```
