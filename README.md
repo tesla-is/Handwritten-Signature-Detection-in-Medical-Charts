@@ -78,8 +78,6 @@ export IOU_THRESHOLD="0.5"
 export MAX_WORKERS="8"                           # 4–16 depending on CPU cores/IO
 ```
 
-> **Do not commit tokens**. Use your org’s secret store for production/Databricks.
-
 ---
 
 ## 🚀 Quick Start
@@ -281,7 +279,7 @@ If you publish a report or internal paper citing this tool, you can use:
   title = {Signature Detection on PDFs (YOLOv8)},
   author = {Rahul Pathak},
   year = {2026},
-  url = {[https://<your-github-host>/<org>/<repo>](https://github.com/tesla-is/Handwritten-Signature-Detection-in-Medical-Charts)},
+  url = {https://github.com/tesla-is/Handwritten-Signature-Detection-in-Medical-Charts},
   note = {PDF-to-image pipeline with CLAHE preprocessing, YOLOv8 inference, and analytics export}
 }
 ```
